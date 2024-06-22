@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-    const [stage, setStage] = useState(0);
+    const [stage, setStage] = useState(0); // 단계 State
     const onClick = () => {
         if (stage >= 20) {
             alert("그만~");
@@ -10,13 +10,13 @@ function App() {
         }
         setStage(stage + 1);
     };
-    let topPart = [];
-    let bottomPart = [];
+    let topPart = []; // 윗부분
+    let bottomPart = []; // 아랫부분
     for (let i = 0; i < stage; i++) {
-        let topLeading = "";
-        let topTrailing = "";
-        let bottomLeading = "";
-        let bottomTrailing = "";
+        let topLeading = ""; // 좌상부
+        let topTrailing = ""; // 우상부
+        let bottomLeading = ""; // 좌하부
+        let bottomTrailing = ""; // 우하부
         for (let j = 0; j < stage; j++) {
             if (i <= j) {
                 topLeading += "⭐️";
