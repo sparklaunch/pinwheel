@@ -39,24 +39,16 @@ function App() {
                 bottomTrailing += "🧮";
             }
         }
-        topPart.push(
-            <p>
-                {topLeading}
-                {topTrailing}
-            </p>
-        );
-        bottomPart.push(
-            <p>
-                {bottomLeading}
-                {bottomTrailing}
-            </p>
-        );
+        topPart.push(<p>{topLeading + topTrailing}</p>);
+        bottomPart.push(<p>{bottomLeading + bottomTrailing}</p>);
     }
     return (
         <div className="App">
             <input type="button" value={stage + "+"} onClick={onClick} />
-            {topPart}
-            {bottomPart}
+            <div>
+                {topPart}
+                {bottomPart}
+            </div>
         </div>
     );
 }
